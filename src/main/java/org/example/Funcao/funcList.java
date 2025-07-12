@@ -8,16 +8,6 @@ import org.example.constantes.statusAluno;
 public class funcList {
     public static Escola list = new  Escola();
 
-    /*
-        Essa função vai ser utilizada
-        para eu poder visualizar todas
-        as lista de cada condição
-        aprovado | reprovado | recuperacao
-
-        utilizar uma class separada para isso
-        deixa o meu codigo mais limpo e Organizado
-    */
-
     public static void listAprovado() {
         System.out.println("----------------------- LIST APROVADO -----------------------");
         for(Aluno lista: list.alunos){
