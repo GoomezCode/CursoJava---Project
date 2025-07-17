@@ -10,6 +10,17 @@ public abstract class pessoa { // this is a superClass
     private String nomeMae;
     private String nomePai;
 
+    public abstract Double salario();
+    /*
+        Método abstrato:
+            Podemos escrever que determinando
+            método será sempre escrito pelas
+            classes filhas.
+
+            Esse método e que fica na SueprClass
+            ela e obrigatória para as SubClass
+    */
+
 //	---------------------------- /*Setters é Getters*/ ----------------------------
     public String getNome() {
         return nome;

@@ -59,4 +59,11 @@ public class Secretario extends pessoa {
         return Objects.hash(registro, nivelCargo, experiencia);
     }
 //	---------------------------- /*HashCode and Equals*/ ---------------------------
+
+//	---------------------------- /*Métodos*/ ---------------------------
+    @Override
+    public Double salario() {
+        return 2300.0;
+    }
+//	---------------------------- /*Métodos*/ ---------------------------
 }

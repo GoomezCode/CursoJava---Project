@@ -144,7 +144,12 @@ public class Aluno extends pessoa { // this is a subClass
 			}else {
 				return statusAluno.REPROVADO;
 			}
-	}	
+	}
+
+	@Override
+	public Double salario() {
+		return 0.0;
+	}
 //	---------------------------- /*Métodos De Calculos*/ ---------------------------	
 
 //	---------------------------- /*HastCode e Equals*/ ----------------------------
