@@ -2,7 +2,7 @@ package org.example.Funcao;
 
 
 import org.example.Executavel.Escola;
-import org.example.classes.Aluno;
+import org.example.classes.subClass.Aluno;
 import org.example.constantes.statusAluno;
 
 public class funcList {

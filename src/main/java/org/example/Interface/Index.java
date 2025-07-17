@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
 
-import org.example.classes.Aluno;
+import org.example.classes.subClass.Aluno;
 
 
 import javax.swing.JTextField;

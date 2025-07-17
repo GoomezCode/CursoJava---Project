@@ -1,4 +1,4 @@
-package org.example.classes;
+package org.example.classes.subClass;
 
 import java.util.Objects;
 

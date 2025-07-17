@@ -1,7 +1,8 @@
 package org.example.Executavel;
 
-import	org.example.Funcao.funcList;
-import org.example.classes.*;
+import org.example.classes.subClass.Aluno;
+import org.example.classes.subClass.disciplina;
+
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,43 +14,23 @@ public class Escola {
 		for(int i = 1; i <= 2; i++){
 			Aluno1();
 		}
-		for(Aluno aluno : alunos){
-
-			for(int i = 0; i < alunos.size(); i++){ // dentro desse for está uma função de Substituir uma Aluno da Lista
-				if(aluno.getNome().equalsIgnoreCase("alex")){
-					Aluno trocar = new Aluno();
-					trocar.setNome("Aluno foi trocado");
-
-					disciplina dis = new disciplina();
-					dis.setDisciplina("Matemática");
-					dis.setNota(95.0);
-					trocar.getDisciplinas().add(dis);
-
-					alunos.set(i, trocar);
-					aluno = alunos.get(i);
-				}
-			}
-
-			boolean listaAlunos = false;// coloquei so pra não ficar entrando nessa função
-			if(listaAlunos == true) {
-
-				System.out.println("Aluno = " + aluno.getNome());
-
-				for (disciplina disc : aluno.getDisciplinas()) {
-					System.out.println("Materia = " + disc.getDisciplina() + " | " + "Nota = " + disc.getNota());
-				}
-				System.out.println("media final = " + aluno.getStatus() + " | " + "media = " + aluno.getMediaAl());
-				System.out.println("----------------------------------------------------");
-			}
-
-		}
-
+//			boolean listaAlunos = false;// coloquei so pra não ficar entrando nessa função
+//			if(listaAlunos == true) {
+//
+//				System.out.println("Aluno = " + aluno.getNome());
+//
+//				for (disciplina disc : aluno.getDisciplinas()) {
+//					System.out.println("Materia = " + disc.getDisciplina() + " | " + "Nota = " + disc.getNota());
+//				}
+//				System.out.println("media final = " + aluno.getStatus() + " | " + "media = " + aluno.getMediaAl());
+//				System.out.println("----------------------------------------------------");
+//			}
 	}
 	// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 	public static void Aluno1() {
-		Aluno aluno1 = new Aluno(); /*Aqui será o Julio*/
+		Aluno aluno = new Aluno();
 		
 		//	--------- /*Entrada de Dados do Aluno*/ ---------
 		String nome = JOptionPane.showInputDialog("Nome Completo: ");
@@ -78,16 +59,16 @@ public class Escola {
 		//	--------- /*Entrada de Dados País do Aluno*/ ---------
 
 		//	--------- /*Dados Do Pais do Aluno*/ ---------
-		aluno1.setNomeMae(nomeMae);
-		aluno1.setNomePai(nomePai);
-		aluno1.setTelMae(Double.valueOf(telMae));
-		aluno1.setTelPai(Double.valueOf(telPai));
-		aluno1.setEmailMae(emailMae);
-		aluno1.setEmailPai(emailPai);
-		aluno1.setCpfMae(cpfMae);
-		aluno1.setRgMae(rgMae);
-		aluno1.setCpfPai(cpfPai);
-		aluno1.setRgPai(rgPai);
+		aluno.setNomeMae(nomeMae);
+		aluno.setNomePai(nomePai);
+		aluno.setTelMae(Double.valueOf(telMae));
+		aluno.setTelPai(Double.valueOf(telPai));
+		aluno.setEmailMae(emailMae);
+		aluno.setEmailPai(emailPai);
+		aluno.setCpfMae(cpfMae);
+		aluno.setRgMae(rgMae);
+		aluno.setCpfPai(cpfPai);
+		aluno.setRgPai(rgPai);
 		//	--------- /*Dados Do Pais do Aluno*/ ---------
 		}
 		
@@ -99,11 +80,11 @@ public class Escola {
 			String notaDisciplina = JOptionPane.showInputDialog("Digite a Nota da Disciplina "+i+": ");
 			disciplina.setDisciplina(nomeDisciplina);
 			disciplina.setNota(Double.valueOf(notaDisciplina));
-			aluno1.getDisciplinas().add(disciplina);
+			aluno.getDisciplinas().add(disciplina);
 		}
 		while(true){
 //			System.out.println("------------------------------------------------------------");
-//			for(disciplina listDisciplina : aluno1.getDisciplinas()){
+//			for(disciplina listDisciplina : aluno.getDisciplinas()){
 //				System.out.println(listDisciplina);
 //			}
 
@@ -111,7 +92,7 @@ public class Escola {
 
 			if(escolhaRemover == 0){
 				String removeDisciplina = JOptionPane.showInputDialog("Qual disciplina deseja remover? | 1 | 2 | 3 | 4 | : ");
-				aluno1.getDisciplinas().remove(Integer.valueOf(removeDisciplina).intValue() - 1);
+				aluno.getDisciplinas().remove(Integer.valueOf(removeDisciplina).intValue() - 1);
 			}else{
 				break;
 			}
@@ -120,33 +101,33 @@ public class Escola {
 		//	--------- /*Entrada de Dados da Nota*/ ---------
 		
 	//	--------- /*Dados Do Aluno*/ ---------
-		aluno1.setNome(nome);
-//			aluno1.setIdade(Integer.valueOf(idade));
-//			aluno1.setNomeEscola(nomeEscola);
-//			aluno1.setCpf(cpf);
-//			aluno1.setRg(rg);
-//			aluno1.setDataNascimento(dataNascimento);
-//			aluno1.setDataMatricula(dataMatricula);
-//			aluno1.setSerieEscolar(serieEscolar);
-//			aluno1.setResidencia(residencia);
+		aluno.setNome(nome);
+//			aluno.setIdade(Integer.valueOf(idade));
+//			aluno.setNomeEscola(nomeEscola);
+//			aluno.setCpf(cpf);
+//			aluno.setRg(rg);
+//			aluno.setDataNascimento(dataNascimento);
+//			aluno.setDataMatricula(dataMatricula);
+//			aluno.setSerieEscolar(serieEscolar);
+//			aluno.setResidencia(residencia);
 	//	--------- /*Dados Do Aluno*/ ---------
 
-		alunos.add(aluno1);
+		alunos.add(aluno);
 //
 //		System.out.println("----------Status Aluno----------");
-//		System.out.println("Nome: "+ aluno1.getNome());
-//		System.out.println("Idade: "+ aluno1.getIdade());
-//		System.out.println("Nome Escola: "+ aluno1.getNomeEscola());
-//		System.out.println("CPF: "+ aluno1.getCpf());
-//		System.out.println("RG: "+ aluno1.getRg());
-//		System.out.println("Data Nascimento: "+ aluno1.getDataNascimento());
-//		System.out.println("Data Matricula: "+ aluno1.getDataMatricula());
-//		System.out.println("Serie Escolar: "+ aluno1.getSerieEscolar());
-//		System.out.println("Residencia: "+ aluno1.getResidencia());
-//		System.out.println("Média: "+ aluno1.getMediaAl());
-//		System.out.println("Resultado: "+ (aluno1.getStatus() ? "Aprovado" : "Reprovado"));
+//		System.out.println("Nome: "+ aluno.getNome());
+//		System.out.println("Idade: "+ aluno.getIdade());
+//		System.out.println("Nome Escola: "+ aluno.getNomeEscola());
+//		System.out.println("CPF: "+ aluno.getCpf());
+//		System.out.println("RG: "+ aluno.getRg());
+//		System.out.println("Data Nascimento: "+ aluno.getDataNascimento());
+//		System.out.println("Data Matricula: "+ aluno.getDataMatricula());
+//		System.out.println("Serie Escolar: "+ aluno.getSerieEscolar());
+//		System.out.println("Residencia: "+ aluno.getResidencia());
+//		System.out.println("Média: "+ aluno.getMediaAl());
+//		System.out.println("Resultado: "+ (aluno.getStatus() ? "Aprovado" : "Reprovado"));
 //		System.out.println("");
-//		for(disciplina listDisciplina : aluno1.getDisciplinas()){
+//		for(disciplina listDisciplina : aluno.getDisciplinas()){
 //			System.out.println(listDisciplina);
 //		}
 //		System.out.println("------------------------------------------------------------");
