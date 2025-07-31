@@ -1,7 +1,6 @@
 package org.example.Executavel;
 
-import org.example.classes.subClass.Aluno;
-import org.example.classes.subClass.disciplina;
+import org.example.classes.subClass.*;
 
 import javax.swing.*;
 import java.util.ArrayList;

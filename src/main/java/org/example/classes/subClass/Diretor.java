@@ -1,10 +1,11 @@
 package org.example.classes.subClass;
 
-import org.example.classes.superClass.pessoa;
+import org.example.Interface.PermitirAcesso;
+import org.example.classes.superClass.Pessoa;
 
 import java.util.Objects;
 
-public class Diretor extends pessoa {
+public class Diretor extends Pessoa implements PermitirAcesso {
     private String registroEducacional;
     private String tempoDirecao;
     private String titulacao;
@@ -67,4 +68,25 @@ public class Diretor extends pessoa {
     }
 //	---------------------------- /*Métodos*/ ---------------------------
 
+    private String usuario;
+    private int senha;
+
+    public Diretor(String usuario, int senha){
+        this.usuario = usuario;
+        this.senha = senha;
+    }
+    public Diretor(){}
+
+    @Override
+    public boolean autenticar(String usuario, int senha) {
+        this.usuario = usuario;
+        this.senha = senha;
+
+        return autenticar();
+    }
+
+    @Override
+    public boolean autenticar() {
+        return usuario.equalsIgnoreCase("admin") && senha == 123;
+    }
 }
