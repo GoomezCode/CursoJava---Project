@@ -1,15 +1,18 @@
 package org.example.classes.subClass;
 
-import org.example.classes.superClass.pessoa;
+import org.example.Interface.PermitirAcesso;
+import org.example.classes.superClass.Pessoa;
 
 import java.util.Objects;
 
-public class Secretario extends pessoa {
+public class Secretario extends Pessoa implements PermitirAcesso {
+
     private String registro;
     private String nivelCargo;
     private String experiencia;
 
 //	---------------------------- /*Setters é Getters*/ ----------------------------
+
     public String getRegistro() {
         return registro;
     }
@@ -64,6 +67,34 @@ public class Secretario extends pessoa {
     @Override
     public Double salario() {
         return 2300.0;
-    }
+    }/*This method is from the SuperClass */
 //	---------------------------- /*Métodos*/ ---------------------------
+
+
+//	---------------------------- /*Autenticação*/ ---------------------------
+    private String usuario;
+    private int senha;
+
+    public Secretario(String usuario, int senha){
+        this.usuario = usuario;
+        this.senha = senha;
+    }
+    public Secretario(){}
+
+
+    /*this is Method for the contract of a authentication*/
+    @Override
+    public boolean autenticar(String usuario, int senha) {
+        // return usuario.equalsIgnoreCase("admin") && senha == 123;
+        this.usuario = usuario;
+        this.senha = senha;
+        return autenticar();
+    }
+
+    @Override
+    public boolean autenticar() {
+        return usuario.equalsIgnoreCase("admin") && senha == 123;
+    }
+//	---------------------------- /*Autenticação*/ ---------------------------
+
 }

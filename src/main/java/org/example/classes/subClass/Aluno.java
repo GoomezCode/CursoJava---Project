@@ -1,12 +1,12 @@
 package org.example.classes.subClass;
 
-import org.example.classes.superClass.pessoa;
+import org.example.classes.superClass.Pessoa;
 import org.example.constantes.statusAluno;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Aluno extends pessoa { // this is a subClass
+public class Aluno extends Pessoa { // this is a subClass
 	// Dados do Aluno
 	private String dataMatricula;
 	private String serieEscolar;

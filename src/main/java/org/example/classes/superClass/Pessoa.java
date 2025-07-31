@@ -1,6 +1,6 @@
 package org.example.classes.superClass;
 
-public abstract class pessoa { // this is a superClass
+public abstract class Pessoa { // this is a superClass
     private String nome;
     private int idade;
     private String cpf;
